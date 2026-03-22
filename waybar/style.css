@@ -1,0 +1,60 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background: rgba(15, 15, 25, 0.4); /* Deep space transparent */
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces,
+#clock,
+#network,
+#pulseaudio,
+#custom-launcher,
+#tray {
+    background: rgba(255, 255, 255, 0.05); /* Frosted glass effect */
+    padding: 0px 15px;
+    margin: 4px 4px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #89b4fa;
+}
+
+#workspaces button.active {
+    color: #f5c2e7; /* Sunset Pink */
+    background: rgba(245, 194, 231, 0.1);
+    border-bottom: 2px solid #f5c2e7;
+}
+
+#network {
+    color: #89dceb; /* Aurora Blue */
+}
+
+#pulseaudio {
+    color: #fab387; /* Sunset Orange */
+}
+
+#clock {
+    color: #cba6f7; /* Nebula Purple */
+    font-weight: bold;
+}
+
+#tray {
+    margin-right: 10px;
+}
+
+#network:hover, #pulseaudio:hover, #workspaces button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+} 
