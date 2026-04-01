@@ -1,60 +1,66 @@
+@import "../../.cache/wal/colors-waybar.css";
+
 * {
-    font-family: "JetBrainsMono Nerd Font", "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", sans-serif;
     font-size: 13px;
     border: none;
-    border-radius: 0;
+    border-radius: 24px;
 }
 
 window#waybar {
-    background: rgba(15, 15, 25, 0.4); /* Deep space transparent */
+    background: transparent;
     color: #cdd6f4;
-    transition-property: background-color;
-    transition-duration: .5s;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 #workspaces,
 #clock,
 #network,
 #pulseaudio,
+#bluetooth,
 #custom-launcher,
 #tray {
-    background: rgba(255, 255, 255, 0.05); /* Frosted glass effect */
-    padding: 0px 15px;
-    margin: 4px 4px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03); /* Ultra sheer */
+    padding: 2px 18px; /* Slightly wider for that water droplet look */
+    margin: 6px 4px;
+    border-radius: 24px; /* Maximum curve */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* The glass 'rim' reflection */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.05); /* The liquid depth */
 }
 
 #workspaces button {
-    padding: 0 5px;
-    color: #89b4fa;
+    padding: 0 8px;
+    color: #89b4fa; /* Calm Water Blue */
+    transition: all 0.4s ease-in-out;
 }
 
 #workspaces button.active {
-    color: #f5c2e7; /* Sunset Pink */
-    background: rgba(245, 194, 231, 0.1);
-    border-bottom: 2px solid #f5c2e7;
+    color: @color15;
+    background: rgba(245, 194, 231, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(245, 194, 231, 0.4); /* Neon liquid glow */
 }
 
 #network {
-    color: #89dceb; /* Aurora Blue */
+    color: @color11; /* Aurora Blue */
 }
 
 #pulseaudio {
-    color: #fab387; /* Sunset Orange */
+    color: @color13; /* Sunset Orange */
 }
 
 #clock {
-    color: #cba6f7; /* Nebula Purple */
-    font-weight: bold;
+    color: @color14; /* Nebula Purple */
+    text-shadow: 0 0 5px rgba(203, 166, 247, 0.5); /* Glowing text */
 }
 
 #tray {
     margin-right: 10px;
 }
 
-#network:hover, #pulseaudio:hover, #workspaces button:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transition: 0.3s;
-} 
+#network:hover, #pulseaudio:hover, #bluetooth:hover, #workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 8px currentColor; /* Makes the icon glow its own color */
+    transition: all 0.3s ease;
+}
