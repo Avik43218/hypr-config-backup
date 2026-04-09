@@ -1,5 +1,3 @@
-@import "../../.cache/wal/colors-waybar.css";
-
 * {
     font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", sans-serif;
     font-size: 13px;
@@ -35,23 +33,24 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @color15;
-    background: rgba(245, 194, 231, 0.15);
+    color: #f38ba8;
+    background: rgba(243, 139, 168, 0.15);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(245, 194, 231, 0.4); /* Neon liquid glow */
+    border-bottom: 2px solid #f38ba8;
+    box-shadow: 0 0 10px rgba(243, 139, 168, 0.6); /* Neon liquid glow */
 }
 
 #network {
-    color: @color11; /* Aurora Blue */
+    color: #89dceb; /* Cyber Cyan */
 }
 
 #pulseaudio {
-    color: @color13; /* Sunset Orange */
+    color: #fab387; /* Sunset Orange */
 }
 
 #clock {
-    color: @color14; /* Nebula Purple */
-    text-shadow: 0 0 5px rgba(203, 166, 247, 0.5); /* Glowing text */
+    color: #a6e3a1; /* Acid Green */
+    text-shadow: 0 0 8px rgba(166, 227, 161, 0.6); /* Glowing text */
 }
 
 #tray {

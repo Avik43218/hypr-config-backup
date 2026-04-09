@@ -4,7 +4,7 @@
 	"height": 30,
 	"modules-left": ["hyprland/workspaces", "clock"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["pulseaudio", "network", "bluetooth"],
+	"modules-right": ["battery", "pulseaudio", "network", "bluetooth"],
 
 	"hyprland/workspaces": {
 		"format": "{name}",
@@ -14,10 +14,21 @@
 	"clock": {
 		"format": "{:%H:%M} ",
 	},
+	"battery": {
+		"states": {
+			"warning": 40,
+			"critical": 20,
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰚥 {capacity}%",
+		"format-icons": [" ", " ", " ", " ", " "]
+	},
 	"network": {
-		"format-wifi": "",
-		"format-disconnected": "󰤭",
-		"on-click": ""
+		"format-wifi": " {essid}",
+		"format-disconnected": " Disconnected",
+		"tooltip-format": "{ifname} via {gwaddr}",
+		"on-click": "networkmanager_dmenu"
 	},
 	"pulseaudio": {
 		"format": "{volume}% {icon}",
